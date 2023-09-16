@@ -22,7 +22,7 @@ function updateWeatherData(data) {
   windValue.textContent = `${data.wind.speed} km/h`;
 
   // Establece el fondo de pantalla según la ciudad
-  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + data.name + " city')";
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + data.name + "')";
 }
 
 // Función para obtener datos del clima mediante la API
