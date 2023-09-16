@@ -1,51 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather of Today</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El clima ahora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 
-    <body>
-        
-                                <!-- .card, INPUT DIV AND SEARCH PNG-->
-        <div class="card">
-            <div class="search">
-                    <div>
-                        <input type="text" id="city" placeholder="Enter city name..."
-                         spellcheck="false">
-                        <button><img src="img/search.png"></button>
-                    </div>
+</head>
+<body>
+    <header>
+        <img class="ppy" src="./img/ppy.ico" draggable="false">
+        <p>Programando Paraguay ~ Maylén Zaracho - Adán Alvarez</p>
+        <a href="https://github.com/maylenzaracho/MZyAA-weather" target="_blank"><img class="github" src="./img/github.svg" draggable="false"></a>
+    </header>
+    <div class="card">
+        <div class="search">
+            <div>
+                <input type="text" id="city" class="searchbar" placeholder="Buscar ciudad" spellcheck="false">
+                <button id="button" ><img src="img/buscar.png" alt="Search"></button>
             </div>
-                        <!-- los detalles del clima como se van a ver y wind.png, humidity.png-->
-                <div class="weather">
-                    <h1 class="temp">15°C</h1>
-                    <h2>Cambyreta</h2>
-                                <!--los detalles de humdedad y viento-->
-                    <div class="detalles">
-                        <div class="columna">
-                            <img src="img/humedad.png">
-                            <div>
-                                <p class="humedad">50%</p>
-                                <p>Humidity</p>
-                            </div>
-                        </div>
-                        <div class="columna">
-                            <img src="img/viento.png">
-                            <div>
-                                <p class="viento">15km/h</p>
-                                <p>Wind</p>
-                            </div>
-                        </div>
+        </div>
+        <div class="weather">
+            <h1 class="temp" id="temp"></h1>
+            <h3 class="description" id="description"></h3>
+            <h2 class = "city-title" id="city-title"></h2>
+            <div class="details">
+                <div class="column">
+                    <img class="icon" src="./img/humidity.svg"  draggable="false">
+                    <div class="info">
+                        <p class="humidity" id="humidity-value">50%</p>
+                        <p>Humedad</p>
                     </div>
                 </div>
-          </div>
+                <div class="column">
+                    <img class="icon" src="./img/air.svg" draggable="false">
+                    <div class="info">
+                        <p class="wind" id="wind-value">15km/h</p>
+                        <p>Viento</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="video-container">
-            <video src="videos/rain.mp4"autoplay muted loop></video>
-        </div>
-    </body>
+    </div>   
+</body>
 </html>
